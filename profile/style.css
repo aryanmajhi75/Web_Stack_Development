@@ -1,0 +1,103 @@
+body{
+    /* width: 100%;
+    height: 100%; */
+    font-family: 'Roboto', sans-serif;
+    font-size: 18;
+    background-color: #000;
+}
+::-webkit-scrollbar{
+    width: 0px;
+    background: none;
+}
+.glassEffectContainer{
+    /* width: 100%; */
+    height: 100%;
+    /* padding: 15px 15px; */
+    background: rgba(121, 120, 120, 0.36);
+    border-radius: 20px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(1.4px);
+    -webkit-backdrop-filter: blur(1.4px);
+    border: 1px solid rgba(221, 220, 220, 0.48);
+}
+
+.header{
+    height: 100px;
+    width: 50%;
+    display: grid;
+    background-color: antiquewhite;
+    border-radius: 20px;
+}
+.navbar{
+    width: 100%;
+    /* float: inherit; */
+    margin-top: 0%;
+    margin-left: 68%;
+    margin-right: 5%;
+    height: 50px;
+    display: grid;
+    /* background-color: #9d9a9a; */
+}
+.navbar-items{
+    display: flex;
+    padding: 5px 30px;
+}
+.navbar-box{
+    /* margin-top: 5px;
+    margin-left: 10px; */
+    background-color: rgba(221, 212, 212, 0.01);
+    padding: 10px 10px;
+    text-align: center;
+    border-radius: 15px;
+    height: 20px;
+    /* width: 50px; */
+}
+.navbar-indicator{
+    height: 5px;
+    width: 20px;
+    border-radius: 5px;
+    background-color: aqua;
+    transition: 0.7s all ease-in-out;
+}
+.navbar-box:hover .navbar-indicator{
+    background-color: #ffffff;
+    width: 35px;
+}
+.navbar-box:hover li a {
+    background-color: #f2f1f400;
+    transition: 0.4 all ease;
+    color: #ffffff;
+    font-weight: 500;
+}
+ul li{
+    /* padding: 0px; */
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+    /* text-transform: uppercase; */
+    color: #9d9a9a;
+    font-size: 16;
+    font-weight: 500;
+    text-align: center;
+}
+/* .heading{
+    height: 70px;
+    width: 30%; 
+    position: relative; 
+    background-color: #ffffff; 
+    margin-right: 70%;
+    margin-top: 40px;
+}
+.heading-text {
+    text-transform: uppercase;
+    font-size: 32px;
+    font-weight: bold;
+    color: #ffffff;
+} */
+.paragraph{
+    color: #ffffff;
+}
+.section-1{
+    padding: 10px;
+}
