@@ -401,3 +401,68 @@ h2{
   height: 200px;;
   width: 200px;;
 }
+.project-cardContainer {
+  margin-top: -50px;
+  margin-left: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.project-linkbuttons {
+  margin-top: 45px;
+  padding: 0.1em 0.25em;
+  width: 13em;
+  height: 4.2em;
+  background-color: #212121;
+  border: 0.08em solid #fff;
+  border-radius: 0.3em;
+  font-size: 12px;
+}
+
+.project-linkbuttons span {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  bottom: 0.4em;
+  width: 8.25em;
+  height: 2.5em;
+  background-color: #212121;
+  border-radius: 0.2em;
+  font-size: 1.5em;
+  color: #fff;
+  border: 0.08em solid #fff;
+  box-shadow: 0 0.4em 0.1em 0.019em #fff;
+}
+
+.project-linkbuttons span:hover {
+  transition: all 0.5s;
+  transform: translate(0, 0.4em);
+  box-shadow: 0 0 0 0 #fff;
+}
+
+.project-linkbuttons span:not(hover) {
+  transition: all 1s;
+}
+
+.card {
+  display: inline-grid;
+  width: 600px;
+  height: 70px;
+  border-radius: 30px;
+  background: #212121;
+  box-shadow: 15px 15px 30px rgb(25, 25, 25),
+              -15px -15px 30px rgb(60, 60, 60);
+ } 
+
+.linkbutton-container {
+  margin-top: -30.5%;
+  margin-left: 65%;
+  display: inline-grid;
+  padding: 20px 20px;
+}
+.linkdescription{
+  padding: 10px;
+  margin-left: 10px;
+  color: #04f7f3;
+}
