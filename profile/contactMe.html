@@ -61,20 +61,18 @@
                     contact me
                 </section></h2>
                 <div class="text-container">
-                    <input required="" type="text" name="name" class="input">
+                    <input required="" type="text" id="name" name="name" class="input">
                     <label class="label">Your name</label>
                 </div>
                 <div class="text-container">
-                    <input required="" type="email" name="email" class="input">
+                    <input required="" type="email" id="email" name="email" class="input">
                     <label class="label">Your Email</label>
                 </div>
                 <div class="text-container">
-                    <textarea name="message" class="input" required></textarea>
+                    <textarea name="message" id="message" class="textarea" required></textarea>
                     <label class="label">Your Message</label>
                 </div>
-                <div class="submit-btn">
-                    <button type="submit">submit</button>
-                </div>
+                <button class="submit-btn" type="submit" onclick="sendMessage()">submit</button>
                 <!-- <h1>
                     <div class="heading">Flutter
                     <span class="blinking-dash"></span>
@@ -98,5 +96,6 @@
             </div>
         </section>
     </div>
+    <script src="script.js"></script>
 </body>
 </html>
