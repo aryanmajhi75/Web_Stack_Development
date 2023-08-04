@@ -189,7 +189,7 @@ h2{
     /* position: relative;
     display: flex; */
     padding: 0px;
-    width: 90px;
+    width: 100px;
     height: 100px;
     /* margin-left: 5%; */
 }
@@ -262,6 +262,8 @@ h2{
     display: flex;
     flex-direction: column;
     gap: 7px;
+    margin-bottom: 10%;
+    margin-left: 15%;
     position: relative;
     color: white;
   }
@@ -276,7 +278,7 @@ h2{
   }
   
   .input {
-    width: 200px;
+    width: 600px;
     height: 45px;
     border: none;
     outline: none;
@@ -311,4 +313,12 @@ h2{
     -1px -1px 6px rgba(255, 255, 255, 0.4),
     inset 3px 3px 10px rgba(0,0,0,1),
     inset -1px -1px 6px rgba(255, 255, 255, 0.4);
+  }
+
+  .submit-btn button{
+    margin-bottom:10px;
+    margin-left: 50%;
+    align-items: center;
+    height:10%;
+    width: 40%;
   }
