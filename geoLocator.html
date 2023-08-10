@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <script type='text/javascript' src='http://www.bing.com/api/maps/mapcontrol?callback=GetMap' async defer></script>
+	<script type='text/javascript'>
+    var longitude;
+    var latitude;
+    var x = document.getElementById("demo");
+
+    function getLocation() {
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(showPosition);
+        }
+        else{
+            x.innerHTML = "Geolocation is not supported by this browser.";
+        }
+    }
+    function showPosition(position) {
+        latitude= position.coords.latitude; 
+        longitude=position.coords.longitude;
+        var x = "Latitude: " + latitude +"<br>Longitude: " + longitude;
+        document.getElementById("demo").innerHTML=x;
+    }
+    </script>
+    
+</head>
+<body>
+    <button onclick="getLocation()">Allow Location Access</button>
+    <p id="demo"></p>
+</body>
+</html>
