@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cdCatalog>
+    <cd>
+        <cdType>Audio</cdType>
+        <cdSize>700 MB</cdSize>
+        <cdContent>Classic Rock Hits</cdContent>
+        <cdPrice>15.99</cdPrice>
+    </cd>
+    <cd>
+        <cdType>Data</cdType>
+        <cdSize>4.7 GB</cdSize>
+        <cdContent>Photos and Videos</cdContent>
+        <cdPrice>9.99</cdPrice>
+    </cd>
+    <cd>
+        <cdType>Audio</cdType>
+        <cdSize>650 MB</cdSize>
+        <cdContent>Jazz Collection</cdContent>
+        <cdPrice>12.49</cdPrice>
+    </cd>
+    <cd>
+        <cdType>Data</cdType>
+        <cdSize>60 MB</cdSize>
+        <cdContent>Tally Program</cdContent>
+        <cdPrice>10</cdPrice>
+    </cd>
+    <cd>
+        <cdType>Audio</cdType>
+        <cdSize>610 MB</cdSize>
+        <cdContent>Tom And Jerry</cdContent>
+        <cdPrice>12</cdPrice>
+    </cd>
+</cdCatalog>

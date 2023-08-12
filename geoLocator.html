@@ -1,33 +1,68 @@
-<!DOCTYPE html>
 <html>
+<html lang="en">
 <head>
-    <title></title>
-    <meta charset="utf-8" />
-    <script type='text/javascript' src='http://www.bing.com/api/maps/mapcontrol?callback=GetMap' async defer></script>
-	<script type='text/javascript'>
-    var longitude;
-    var latitude;
-    var x = document.getElementById("demo");
-
-    function getLocation() {
-        if (navigator.geolocation) {
-            navigator.geolocation.getCurrentPosition(showPosition);
-        }
-        else{
-            x.innerHTML = "Geolocation is not supported by this browser.";
-        }
-    }
-    function showPosition(position) {
-        latitude= position.coords.latitude; 
-        longitude=position.coords.longitude;
-        var x = "Latitude: " + latitude +"<br>Longitude: " + longitude;
-        document.getElementById("demo").innerHTML=x;
-    }
-    </script>
-    
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>City Exploration Web App</title>
+<style>
+  #mapCanvas {
+    width: 100%;
+    height: 500px;
+  }
+</style>
 </head>
 <body>
-    <button onclick="getLocation()">Allow Location Access</button>
-    <p id="demo"></p>
+    <canvas>
+        <div id="mapCanvas"></div>
+    </canvas>    
+
+<script>
+  // Bing Maps API Key
+  const apiKey = 'AluRis76UC_1JnYvluP2HrjjGKQzDYyUHNyyB7yMgnPnKdFrPW-sdCTkZY1DDd1E';
+
+  // Initialize Bing Maps
+  function initMap() {
+    const map = new Microsoft.Maps.Map(document.getElementById('mapCanvas'), {
+      credentials: apiKey
+    });
+
+    // Get user's geolocation
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(position => {
+        const userLocation = new Microsoft.Maps.Location(
+          position.coords.latitude,
+          position.coords.longitude
+        );
+
+        // Center map on user's location
+        map.setView({ center: userLocation, zoom: 14 });
+
+        // Add marker for user's location
+        const userPin = new Microsoft.Maps.Pushpin(userLocation, {
+          title: 'Your Location',
+          subTitle: 'You are here',
+          color: 'blue'
+        });
+        map.entities.push(userPin);
+
+        // Add nearby points of interest (simplified example)
+        const nearbyLocations = [
+          { name: 'Rishita Shah', location: new Microsoft.Maps.Location(userLocation.latitude + 0.01, userLocation.longitude + 0.01) },
+          { name: 'Anupam Kumar', location: new Microsoft.Maps.Location(userLocation.latitude - 0.02, userLocation.longitude + 0.02) },
+          // Add more locations here...
+        ];
+
+        nearbyLocations.forEach(location => {
+          const poiPin = new Microsoft.Maps.Pushpin(location.location, {
+            title: location.name,
+            color: 'green'
+          });
+          map.entities.push(poiPin);
+        });
+      });
+    }
+  }
+</script>
+<script type="text/javascript" src="https://www.bing.com/api/maps/mapcontrol?callback=initMap" async defer></script>
 </body>
 </html>
