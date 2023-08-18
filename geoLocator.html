@@ -16,9 +16,8 @@
 </style>
 </head>
 <body>
-    <canvas>
-        <div id="mapCanvas"></div>
-    </canvas>    
+  <div id="mapCanvas"></div>
+    
 
 <script>
   // Bing Maps API Key
@@ -51,8 +50,8 @@
 
         // Add nearby points of interest (simplified example)
         const nearbyLocations = [
-          { name: 'Rishita Shah', location: new Microsoft.Maps.Location(userLocation.latitude + 0.01, userLocation.longitude + 0.01) },
-          { name: 'Anupam Kumar', location: new Microsoft.Maps.Location(userLocation.latitude - 0.02, userLocation.longitude + 0.02) },
+          { name: 'Rishita Shah', location: new Microsoft.Maps.Location(userLocation.latitude - 0.01, userLocation.longitude + 0.01) },
+          { name: 'Anupam Kumar', location: new Microsoft.Maps.Location(userLocation.latitude + 0.0005, userLocation.longitude + 0.01) },
           // Add more locations here...
         ];
 
