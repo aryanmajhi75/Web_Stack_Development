@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<employees>
+    <employee id="1">
+        <personalInformation>
+            <firstName>anupam</firstName>
+            <lastName>kumar</lastName>
+            <dateOfBirth>2001-03-15</dateOfBirth>
+            <gender>Male</gender>
+        </personalInformation>
+        <employmentInformation>
+            <position>Manager</position>
+            <salary>175000</salary>
+        </employmentInformation>
+        <contactInformation>
+            <email>anupam.kumar@gmail.com</email>
+            <countryCode>91</countryCode>
+            <phoneNumber>9113635145</phoneNumber>
+        </contactInformation>
+    </employee>
+    <employee id="2">
+        <personalInformation>
+            <firstName>rishita</firstName>
+            <lastName>shah</lastName>
+            <dateOfBirth>2000-03-15</dateOfBirth>
+            <gender>Female</gender>
+        </personalInformation>
+        <employmentInformation>
+            <position>Manager</position>
+            <salary>85000</salary>
+        </employmentInformation>
+        <contactInformation>
+            <email>rishita.shah@gmail.com</email>
+            <countryCode>91</countryCode>
+            <phoneNumber>9830557268</phoneNumber>
+        </contactInformation>
+    </employee>
+    <employee id="3">
+        <personalInformation>
+            <firstName>hitesh</firstName>
+            <lastName>salimath</lastName>
+            <dateOfBirth>2001-05-25</dateOfBirth>
+            <gender>Male</gender>
+        </personalInformation>
+        <employmentInformation>
+            <position>Sales Manager</position>
+            <salary>175000</salary>
+        </employmentInformation>
+        <contactInformation>
+            <email>hitesh.salimath@gmail.com</email>
+            <countryCode>91</countryCode>
+            <phoneNumber>8277398618</phoneNumber>
+        </contactInformation>
+    </employee>
+    <employee id="4">
+        <personalInformation>
+            <firstName>anshika</firstName>
+            <lastName>yadav</lastName>
+            <dateOfBirth>2002-03-15</dateOfBirth>
+            <gender>Female</gender>
+        </personalInformation>
+        <employmentInformation>
+            <position>Product Manager</position>
+            <salary>90000</salary>
+        </employmentInformation>
+        <contactInformation>
+            <email>anshika.yadav@gmail.com</email>
+            <countryCode>91</countryCode>
+            <phoneNumber>7384531964</phoneNumber>
+        </contactInformation>
+    </employee>
+    <employee id="5">
+        <personalInformation>
+            <firstName>muskan</firstName>
+            <lastName>gupta</lastName>
+            <dateOfBirth>2000-06-30</dateOfBirth>
+            <gender>Female</gender>
+        </personalInformation>
+        <employmentInformation>
+            <position>Production Lead Architect</position>
+            <salary>95000</salary>
+        </employmentInformation>
+        <contactInformation>
+            <email>muskan.gupta@gmail.com</email>
+            <countryCode>91</countryCode>
+            <phoneNumber>8971480195</phoneNumber>
+        </contactInformation>
+    </employee>
+</employees>
