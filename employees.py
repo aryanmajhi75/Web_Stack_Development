@@ -14,3 +14,4 @@ def validate_xml(xml_filename, xsd_filename):
             print(f"Line {error.line}, Column {error.column}: {error.message}")
 
 validate_xml("employees.xml", "employee_schema.xsd")
+    

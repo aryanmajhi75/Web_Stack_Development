@@ -2,8 +2,8 @@
 <employees>
     <employee id="1">
         <personalInformation>
-            <firstName>anupam</firstName>
-            <lastName>kumar</lastName>
+            <firstName>aryan</firstName>
+            <lastName>majhi</lastName>
             <dateOfBirth>2001-03-15</dateOfBirth>
             <gender>Male</gender>
         </personalInformation>
@@ -12,7 +12,7 @@
             <salary>175000</salary>
         </employmentInformation>
         <contactInformation>
-            <email>anupam.kumar@gmail.com</email>
+            <email>aryan.majhi@gmail.com</email>
             <countryCode>91</countryCode>
             <phoneNumber>9113635145</phoneNumber>
         </contactInformation>
@@ -81,6 +81,23 @@
         </employmentInformation>
         <contactInformation>
             <email>muskan.gupta@gmail.com</email>
+            <countryCode>91</countryCode>
+            <phoneNumber>8971480195</phoneNumber>
+        </contactInformation>
+    </employee>
+    <employee id="6">
+        <personalInformation>
+            <firstName>anshika</firstName>
+            <lastName>yadav</lastName>
+            <dateOfBirth>2000-06-20</dateOfBirth>
+            <gender>Female</gender>
+        </personalInformation>
+        <employmentInformation>
+            <position>Production Lead Architect</position>
+            <salary>95000</salary>
+        </employmentInformation>
+        <contactInformation>
+            <email>anshika.yadav@gmail.com</email>
             <countryCode>91</countryCode>
             <phoneNumber>8971480195</phoneNumber>
         </contactInformation>
