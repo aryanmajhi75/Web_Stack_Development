@@ -1,0 +1,21 @@
+body{
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.col{
+   padding: 30px;
+}
+.avatar-div{
+   margin-top: 1%;
+   margin-left: 50%;
+   padding: 10px;
+}
+.col-md-4 .col-md-6{
+   padding: 20px;
+}
+.card{
+   margin-top: 10px;
+   margin-bottom: 10px;
+}
