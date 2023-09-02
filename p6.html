@@ -1,0 +1,138 @@
+<html>
+<html>
+<head>
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="p6.css">
+</head>
+<body>
+    <h1>Registration Form</h1>
+    <form id="registrationForm">
+        <div>
+            <label for="fullName">Full Name:</label>
+            <input type="text" id="fullName" name="fullName" required>
+            <span id="fullNameError" class="error"></span>
+        </div>
+
+        <div>
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" required>
+            <span id="emailError" class="error"></span>
+        </div>
+
+        <div>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            <span id="passwordError" class="error"></span>
+        </div>
+
+        <div>
+            <label for="confirmPassword">Confirm Password:</label>
+            <input type="password" id="confirmPassword" name="confirmPassword" required>
+            <span id="confirmPasswordError" class="error"></span>
+        </div>
+
+        <div>
+            <label for="dob">Date of Birth (YYYY-MM-DD):</label>
+            <input type="text" id="dob" name="dob" required>
+            <span id="dobError" class="error"></span>
+        </div>
+
+        <div>
+            <button type="submit" id="submitButton" disabled>Submit</button>
+        </div>
+    </form>
+
+    <script>
+        // Function to validate Full Name
+        function validateFullName() {
+            const fullName = document.getElementById('fullName').value;
+            const fullNameError = document.getElementById('fullNameError');
+            if (/^[a-zA-Z\s]{3,}$/.test(fullName)) {
+                fullNameError.textContent = '';
+                return true;
+            } else {
+                fullNameError.textContent = 'Full Name must contain at least 3 alphabetic characters.';
+                return false;
+            }
+        }
+
+        // Function to validate Email Address
+        function validateEmail() {
+            const email = document.getElementById('email').value;
+            const emailError = document.getElementById('emailError');
+            const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+            if (emailRegex.test(email)) {
+                emailError.textContent = '';
+                return true;
+            } else {
+                emailError.textContent = 'Invalid email address format.';
+                return false;
+            }
+        }
+
+        // Function to validate Password
+        function validatePassword() {
+            const password = document.getElementById('password').value;
+            const passwordError = document.getElementById('passwordError');
+            if (password.length >= 8 && /[a-zA-Z]/.test(password) && /\d/.test(password)) {
+                passwordError.textContent = '';
+                return true;
+            } else {
+                passwordError.textContent = 'Password must be at least 8 characters and contain letters and numbers.';
+                return false;
+            }
+        }
+
+        // Function to validate Confirm Password
+        function validateConfirmPassword() {
+            const password = document.getElementById('password').value;
+            const confirmPassword = document.getElementById('confirmPassword').value;
+            const confirmPasswordError = document.getElementById('confirmPasswordError');
+            if (password === confirmPassword) {
+                confirmPasswordError.textContent = '';
+                return true;
+            } else {
+                confirmPasswordError.textContent = 'Passwords do not match.';
+                return false;
+            }
+        }
+
+        // Function to validate Date of Birth and calculate age
+        function validateDOB() {
+            const dobString = document.getElementById('dob').value;
+            const dobError = document.getElementById('dobError');
+            const dob = new Date(dobString);
+            const now = new Date();
+            const age = now.getFullYear() - dob.getFullYear();
+            if (age >= 18) {
+                dobError.textContent = '';
+                return true;
+            } else {
+                dobError.textContent = 'You must be at least 18 years old.';
+                return false;
+            }
+        }
+
+        // Function to enable or disable the Submit button based on form validity
+        function enableSubmitButton() {
+            const formIsValid = validateFullName() && validateEmail() && validatePassword() && validateConfirmPassword() && validateDOB();
+            const submitButton = document.getElementById('submitButton');
+            submitButton.disabled = !formIsValid;
+        }
+
+        // Event listeners for real-time validation
+        document.getElementById('fullName').addEventListener('input', validateFullName);
+        document.getElementById('email').addEventListener('input', validateEmail);
+        document.getElementById('password').addEventListener('input', validatePassword);
+        document.getElementById('confirmPassword').addEventListener('input', validateConfirmPassword);
+        document.getElementById('dob').addEventListener('input', validateDOB);
+
+        // Event listener for form submission
+        document.getElementById('registrationForm').addEventListener('submit', function (e) {
+            e.preventDefault(); // Prevent the form from submitting if it's invalid
+            enableSubmitButton(); // Ensure the form is valid before submitting
+            // You can add code to submit the form data to the server here if the form is valid.
+        });
+    </script>
+</body>
+</html>
