@@ -26,6 +26,7 @@ const App = () => {
   
 
   const navigateToBookDetails = (book) => {
+    console.log(book)
     setSelectedBook(book);
     setCurrentPage('bookDetails');
   };
@@ -41,8 +42,8 @@ const App = () => {
       case 'bookDetails':
         return (
           <BookDetails
-          book={selectedBook}
           books={books}
+          book={selectedBook}
           onReviewButtonClick={navigateToReviewPage}
           />
         );

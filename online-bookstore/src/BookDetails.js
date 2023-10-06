@@ -1,10 +1,15 @@
 import React from 'react';
 
-const BookDetails = ({ books, selectedBook,onReviewButtonClick }) => {
-  const book = books.find((b) => b.title === selectedBook);
+const BookDetails = ({ books, book,onReviewButtonClick }) => {
+  console.log(book.title)
 
-  if (!book || !selectedBook) {
+  if (!books || !book) {
     return <div>Book not found.</div>;
+  }
+
+  const handleReviewButtonClick= () => {
+      onReviewButtonClick();
+      
   }
 
   return (
@@ -17,7 +22,7 @@ const BookDetails = ({ books, selectedBook,onReviewButtonClick }) => {
       <p>Language: {book.language}</p>
       <p>Country: {book.country}</p>
       <p>Number of Pages: {book.pages}</p>
-      <button onClick={onReviewButtonClick()}>Write a Review</button>
+      <button onClick={handleReviewButtonClick}>Write a Review</button>
     </div>
   );
 };

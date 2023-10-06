@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import App from './App.css';
+import './App.css';
 
 const properties = [
   {
@@ -188,7 +188,7 @@ function App() {
       <div>
         <input
           type="text"
-          placeholder="Search Properties"
+          placeholder="Search Properties by Area"
           value={searchQuery}
           onChange={handleSearchInputChange}
         />
@@ -196,14 +196,23 @@ function App() {
       {view === 'list' && (
         <>
         <h2>Property List</h2>
-          <div>
+          <div className="property-container">
             {filteredProperties.map((property) => (
               <div className="property-card" key={property.id}>
+                {/* "type": "Duplex",
+                    "floorspace": 1264,
+                    "beds": 3,
+                    "baths": 1, 
+                  */}
                 <img src={property.image} alt={property.title} />
-                <h3>{property.title}</h3>
-                <p>{property.location}</p>
-                <p>{property.price}</p>
-                <button onClick={() => handlePropertySelect(property.id)}>
+                <h3>City : {property.city}</h3>
+                <p>Area : {property.area}</p>
+                <p>Address : {property.address}</p>
+                <p>Type : {property.type}</p>
+                <p>Floor Space : {property.floorspace}</p>
+                <p>No. of beds : {property.beds}</p>
+                <p>No. of baths : {property.baths}</p>
+                <button className="item-button" onClick={() => handlePropertySelect(property.id)}>
                   View Details
                 </button>
               </div>

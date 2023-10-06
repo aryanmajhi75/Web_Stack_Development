@@ -2,10 +2,11 @@ import React, { useState } from 'react';
 
 const ReviewPage = () => {
   const [reviewText, setReviewText] = useState('');
+  const [reviewData, setReviewData] = useState('');
 
   const handleReviewSubmit = () => {
     console.log(`Review submitted: ${reviewText}`);
-    setReviewText('');
+    setReviewData(reviewText);
   };
 
   return (
@@ -17,6 +18,8 @@ const ReviewPage = () => {
         onChange={(e) => setReviewText(e.target.value)}
       ></textarea>
       <button onClick={handleReviewSubmit}>Submit Review</button>
+      <h2>Reviews:</h2>
+      <p>{reviewData}</p>
     </div>
   );
 };
