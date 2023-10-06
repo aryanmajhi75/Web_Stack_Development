@@ -7,38 +7,50 @@
 <body>
     <h1>Registration Form</h1>
     <form id="registrationForm">
-        <div>
-            <label for="fullName">Full Name:</label>
+        <div class="inputbox">
             <input type="text" id="fullName" name="fullName" required>
+            <span>Full Name</span>
+            <i></i>
+        </div>
+        <div class="errorbox">
             <span id="fullNameError" class="error"></span>
         </div>
-
-        <div>
-            <label for="email">Email Address:</label>
+        <div class="inputbox">
             <input type="email" id="email" name="email" required>
+            
+            <span>Email Address</span>
+            <i></i>
+        </div>
+        <div class="errorbox">
             <span id="emailError" class="error"></span>
         </div>
-
-        <div>
-            <label for="password">Password:</label>
+        <div class="inputbox">
             <input type="password" id="password" name="password" required>
+            <span>Password</span>
+            <i></i>
+        </div>
+        <div class="errorbox">
             <span id="passwordError" class="error"></span>
         </div>
-
-        <div>
-            <label for="confirmPassword">Confirm Password:</label>
-            <input type="password" id="confirmPassword" name="confirmPassword" required>
+        <div class="inputbox">
+            <input type="text" id="confirmPassword" name="confirmPassword" required>
+            <span>Confirm Password</span>
+            <i></i>
+        </div>
+        <div class="errorbox">
             <span id="confirmPasswordError" class="error"></span>
         </div>
-
-        <div>
-            <label for="dob">Date of Birth (YYYY-MM-DD):</label>
+        <div class="inputbox">
             <input type="text" id="dob" name="dob" required>
+            <span>D.O.B</span>
+            <i></i>
+        </div>
+        <div class="errorbox">
             <span id="dobError" class="error"></span>
         </div>
-
-        <div>
-            <button type="submit" id="submitButton" disabled>Submit</button>
+        <div class="buttonBox">
+            <button class="btn" type="submit" id="submit"><i class="animation"></i>SUBMIT<i class="animation"></i>
+            </button>
         </div>
     </form>
 
